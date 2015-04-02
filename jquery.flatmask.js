@@ -57,7 +57,7 @@
 			$.flatUnmaskElement(element);
 		}
 		
-		if(element.css("position") == "static") {
+		if(element.css("position") === "static") {
 			element.addClass("masked-relative");
 		}
 		
@@ -85,12 +85,6 @@
 			element.append(maskMsgDiv);
 			
 			//calculate center position
-			var loc = window.location.pathname;
-			//var dir = loc.substring(0, loc.lastIndexOf('/'));
-			var dir = loc.substring(0, loc.indexOf('/'));
-			console.log(loc);
-			console.log(dir);			
-			
 			maskMsgDiv.css("top", Math.round(element.height() / 2 - (maskMsgDiv.height() - parseInt(maskMsgDiv.css("padding-top")) - parseInt(maskMsgDiv.css("padding-bottom"))) / 2)+"px");
 			maskMsgDiv.css("left", Math.round(element.width() / 2 - (maskMsgDiv.width() - parseInt(maskMsgDiv.css("padding-left")) - parseInt(maskMsgDiv.css("padding-right"))) / 2)+"px");
 			
