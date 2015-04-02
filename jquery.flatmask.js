@@ -18,13 +18,13 @@
 	 *              before the delay times out, no mask is displayed. This can be used to prevent unnecessary 
 	 *              mask display for quick processes.   	
 	 */
-	$.fn.flatMask = function(label, icon, delay){
+	$.fn.flatMask = function(label, delay){
 		$(this).each(function() {
 			if(delay !== undefined && delay > 0) {
 		        var element = $(this);
-		        element.data("_mask_timeout", setTimeout(function() { $.flatMaskElement(element, label, icon)}, delay));
+		        element.data("_mask_timeout", setTimeout(function() { $.flatMaskElement(element, label)}, delay));
 			} else {
-				$.flatMaskElement($(this), label, icon);
+				$.flatMaskElement($(this), label);
 			}
 		});
 	};
@@ -45,7 +45,7 @@
 		return this.hasClass("masked");
 	};
 
-	$.flatMaskElement = function(element, label, icon){
+	$.flatMaskElement = function(element, label){
 	
 		//if this element has delayed mask scheduled then remove it and display the new one
 		if (element.data("_mask_timeout") !== undefined) {
