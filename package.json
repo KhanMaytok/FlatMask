@@ -1,0 +1,15 @@
+{
+  "name": "Flatmask",
+  "filename": "jquery.flatmask.min.js",
+  "version": "0.1.0",
+  "description": "Jquery plugin to mask DOM elements when loading. Original idea: Sergiy Kovalchuk | https://code.google.com/p/jquery-loadmask/",
+  "author": "Your Name <you.name@example.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sakyastelios/flatmask"
+  },
+  "keywords": [
+  "flat",
+  "mask"
+  ],
+}
